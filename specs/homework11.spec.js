@@ -83,13 +83,14 @@ describe ("5 UI tests", () => {
         await page.click(".fa-cart-plus");
         await page.waitForSelector('.maintext > .fa-shopping-cart');
         await page.waitForSelector("//div[@class='container-fluid cart-info product-list']//table[@class='table table-striped table-bordered']//tr[position() = 2]//td[2]//a");
-        await page.waitForSele
         await page.click("//div[@class='container-fluid cart-info product-list']//table[@class='table table-striped table-bordered']//tr[position() = 2]//td[7]//a");
         const empty = '.contentpanel';
         const emptyText = await page.textContent(empty);
         //Не понимаю почему нижняя строчка не отрабатывает, хочу проверить, что конкретного элемента нет на странице...
         //assert.notExists("//div[@class='container-fluid cart-info product-list']//table[@class='table table-striped table-bordered']//tr[position() = 2]//td[2]//a");
+        //const isNot = "//div[@class='container-fluid cart-info product-list']//table[@class='table table-striped table-bordered']//tr[position() = 2]//td[2]//a";
         assert.include(emptyText, 'Your shopping cart is empty!', 'Error');
+      
     });
 
     test('Check that we can change currency ', async () => {
