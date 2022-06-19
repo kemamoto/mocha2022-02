@@ -1,13 +1,13 @@
-import MainPage from "../pages/mainPage";
-import searchPanel from "../elements/searchPanel";
-import shoppingCart from "../pages/shoppingCart";
-import bookmarks from "../pages/bookmarks";
+import MainPage from "./mainPage";
+import SearchPanel from "../elements/searchPanel";
+import ShoppingCart from "./shoppingCart";
+import Bookmarks from "./bookmarks";
 
 const app = () => ({
     Main: () => ({...MainPage}),
-    SearchPanel: () => ({...searchPanel}),
-    ShoppingCart: () => ({...shoppingCart}),
-    Bookmarks: () => ({...bookmarks}),
+    SearchPanel: () => ({...SearchPanel}),
+    ShoppingCart: () => ({...ShoppingCart}),
+    Bookmarks: () => ({...Bookmarks}),
 });
 
 export default app;

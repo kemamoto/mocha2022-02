@@ -4,7 +4,7 @@ const goToBookmarks = "//a[@id='wishlist-total']";
 const addButton = "//button[contains(@data-original-title, 'В закладки')]";
 const bookmarkItem = "//div[@id='content']//table[@class='table table-bordered table-hover']//tbody//tr//td[2]//a";
 
-const bookmarks = {
+const Bookmarks = {
 
     openBookmarks: async (page) => {
         await page.click(goToBookmarks);
@@ -22,4 +22,4 @@ const bookmarks = {
     },
 };
 
-export default bookmarks;
+export default Bookmarks;

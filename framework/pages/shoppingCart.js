@@ -7,7 +7,7 @@ const cart = "//div[@id='content']//h1";
 const cartItem = "//div[@class='table-responsive']//table[@class='table table-bordered']//tbody//tr//td[3]";
 const emptyCart = "//div[@id='content']//p";
 
-const shoppingCart = {
+const ShoppingCart = {
 
     openCart: async (page) => {
         await page.click(goToCart);
@@ -40,4 +40,4 @@ const shoppingCart = {
     },
 };
 
-export default shoppingCart;
+export default ShoppingCart;
