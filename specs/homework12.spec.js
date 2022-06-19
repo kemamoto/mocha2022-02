@@ -1,5 +1,4 @@
 import chai from 'chai';
-import playwright from 'playwright';
 const assert = chai.assert;
 import {run, stop} from "../lib/browser";
 import app from "../framework/pages";
@@ -58,8 +57,7 @@ describe ("5 UI tests using Page Object approach", () => {
     test('Add an item to the Bookmarks', async () => {
         const item = "Книга домашнего умельца";
         await app().Main().login(page, "milecks@mail.ru", "d63mf44f!");
-        await app().Bookmarks().addToBookmarks(page, item);
-        page.reload();   
+        await app().Bookmarks().addToBookmarks(page, item); 
         await app().Bookmarks().openBookmarks(page);     
         const itemText = await app().Bookmarks().getBookmarkItemText(page);
         assert.include( itemText, item, 'Bookmark is not found');
